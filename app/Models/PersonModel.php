@@ -18,7 +18,6 @@ class PersonModel extends Model
 
         if (!empty($searchValue)) {
             $builder->groupStart()
-                ->like('name', $searchValue)
                 ->orLike('bday', $searchValue)
                 ->groupEnd();
         }
